@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - GeoVultus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="images/geovultus-logo.png" alt="GeoVultus Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="geospatial.html">Geospatial Analysis</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>🌍 Projects in Kenya</h1>
+        <p>Our climate, agriculture, and geospatial initiatives across Kenya.</p>
+    </header>
+
+    <!-- Filter Buttons -->
+    <section class="project-filters">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('agriculture')">Agriculture</button>
+        <button onclick="filterProjects('livestock')">Livestock</button>
+        <button onclick="filterProjects('climate')">Climate</button>
+        <button onclick="filterProjects('engineering')">Engineering</button>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+       
+        <div class="project-card Engineering" onclick="showProject('')">
+            <img src="images/koru.jpg" alt="Drought Monitoring" class="project-image">
+            <h3>Koru-Soin Dam EIA Report</h3>
+            <p>Envronmental Impact assessment.</p>
+        </div>
+        
+        <div class="project-card engineering" onclick="showProject('Tographical surveying.')">
+            <img src="images/kerra.jpg" alt="kerra" class="project-image">
+            <h3>Malava-Kimang'eti Road Construction</h3>
+            <p>KeRRA-Tographical surveying.</p>
+        </div>
+
+       <div class="project-card engineering" onclick="showProject('Kenya Power Utility Mapping','Field surveys and GIS mapping of assets across Western Kenya and Kiambu County to help reduce losses from annomalies and provided quick response to customer.')">
+            <img src="images/kplc.jpg" alt="Kenya Power" class="project-image">
+            <h3>Kenya Power: Utility Mapping</h3>
+            <p>2024-2025 Loss Reduction Project.</p>
+        </div>
+        <!-- Example: Agriculture Project -->
+        <div class="project-card agriculture" onclick="showProject('Subsistence Farming: Maize & Beans','Field surveys and GIS mapping of smallholder maize and bean farms across Central Kenya to monitor yield, soil health, and climate impact.')">
+            <img src="images/maize.jpg" alt="Maize & Beans" class="project-image">
+            <h3>Subsistence Farming: Maize & Beans</h3>
+            <p>Smallholder farms mapping.</p>
+        </div>
+        
+        <div class="project-card livestock" onclick="showProject('Cattle Rustling in Baringo','Geospatial analysis of livestock theft incidents in Baringo County, including hotspot mapping and risk assessment.')">
+            <img src="images/cattle.jpg" alt="Cattle Rustling" class="project-image">
+            <h3>Cattle Rustling in Baringo</h3>
+            <p>Livestock theft monitoring.</p>
+        </div>
+
+        <div class="project-card agriculture" onclick="showProject('Sugarcane Farming: Muhoroni','Monitoring and mapping of sugarcane plantations in Muhoroni for productivity analysis and land use optimization.')">
+            <img src="images/muhoroni.jpg" alt="Sugarcane Muhoroni" class="project-image">
+            <h3>Sugarcane Farming: Muhoroni</h3>
+            <p>Sugarcane production mapping.</p>
+        </div>
+
+        <div class="project-card agriculture" onclick="showProject('Sugarcane Farming: Kibos','Geospatial assessment of sugarcane farms around Kibos, including irrigation efficiency and soil quality analysis.')">
+            <img src="images/kibos.jpg" alt="Sugarcane Kibos" class="project-image">
+            <h3>Sugarcane Farming: Kibos</h3>
+            <p>GIS-based analysis.</p>
+        </div>
+
+        <div class="project-card agriculture" onclick="showProject('Sugarcane Farming: Mumias','GIS monitoring of Mumias sugarcane farms to support sustainable practices.')">
+            <img src="images/mumias.jpg" alt="Sugarcane Mumias" class="project-image">
+            <h3>Sugarcane Farming: Mumias</h3>
+            <p>Farm monitoring and analysis.</p>
+        </div>
+
+        <div class="project-card climate" onclick="showProject('Reforestation Projects','Mapping reforestation initiatives in Kenya to track tree cover growth and carbon sequestration.')">
+            <img src="images/reforestation.jpg" alt="Reforestation" class="project-image">
+            <h3>Reforestation Projects</h3>
+            <p>Tree cover monitoring.</p>
+        </div>
+
+        <div class="project-card climate" onclick="showProject('Flood Risk Mapping','Analyzing historical flood data and satellite imagery to identify vulnerable communities.')">
+            <img src="images/flood.jpg" alt="Flood Risk" class="project-image">
+            <h3>Ahero Flood Risk Mapping</h3>
+            <p>Flood-prone areas identification.</p>
+        </div>
+
+        <div class="project-card climate" onclick="showProject('Drought Monitoring','Using remote sensing and climate data to monitor drought-prone areas.')">
+            <img src="images/drought.jpg" alt="Drought Monitoring" class="project-image">
+            <h3>Drought Monitoring</h3>
+            <p>Drought early warning systems.</p>
+        </div>
+
+        </section>
+
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProject()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 — Built by Steve Mboya</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
